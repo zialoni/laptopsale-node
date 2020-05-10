@@ -1,0 +1,20 @@
+<%- include ("partials/header.ejs") %>
+
+<div class="card bg-dark text-white">
+  <img
+    src="laptops/thumbnails/<%= laptopList.imageFile %>"
+    class="card-img"
+    style="opacity: 0.2;"
+    alt="..."
+  />
+  <div class="card-img-overlay">
+    <h5 class="card-title py-3"><%=laptopList.title %></h5>
+    <h5 class="card-text"><%=laptopList.cpu %></h5>
+    <h5 class="card-text py-3""><%=laptopList.ram %></h5>
+    <h5 class="card-text"><%=laptopList.storage %></h5>
+    <h5 class="card-text py-3""><%=laptopList.screen %></h5>
+    <p class="card-text pt-5"><%=laptopList.description %></p>
+  </div>
+</div>
+
+<%- include ("partials/footer.ejs") %>

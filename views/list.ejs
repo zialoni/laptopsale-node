@@ -1,0 +1,31 @@
+<%- include ("partials/header.ejs") %>
+
+<h1 class="row justify-content-center align-items-center m-3">Laptop List</h1>
+
+<div class="row justify-content-center align-items-center">
+  <% for (let i= 0; i < laptopList.length; i++){ %>
+  <div class="card-md-4 m-3">
+    <div class="card" style="width: 18rem;">
+      <img
+        src="laptops/thumbnails/<%= laptopList[i].imageFile %>"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title"><%= laptopList[i].title %></h5>
+        <p class="card-text">Price: $<%= laptopList[i].price %></p>
+        <a href="/<%= laptopList[i].id %>" class="btn btn-primary">Details</a>
+        <a href="/laptops/edit/<%= laptopList[i].id %>" class="btn btn-primary"
+          >Edit</a
+        >
+
+        <a href="/laptops/delete/<%= laptopList[i].id %>" class="btn btn-danger"
+          >Delete</a
+        >
+      </div>
+    </div>
+  </div>
+  <%}%>
+</div>
+
+<%- include ("partials/footer.ejs") %>
