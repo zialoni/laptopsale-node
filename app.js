@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 //const config = require("./config/key");
 
 mongoose.connect(
-  "mongodb+srv://zia:zia123@zia-123-6nro8.mongodb.net/laptops?retryWrites=true&w=majority",
+  "mongodb+srv://@zia-123-6nro8.mongodb.net/?retryWrites=true&w=majority",
   { useNewUrlParser: true, useCreateIndex: true },
   (req, res) => {
     console.log("db is connected");
